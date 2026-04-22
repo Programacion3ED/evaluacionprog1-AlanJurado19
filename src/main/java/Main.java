@@ -4,11 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-       // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("=== SISTEMA DE USUARIO SEGURO ===");
 
-        // Crear usuario
         System.out.print("Ingrese username: ");
         String username = sc.nextLine();
 
@@ -19,7 +18,7 @@ public class Main {
         int maxIntentos = sc.nextInt();
         sc.nextLine(); // limpiar buffer
 
-        //UsuarioSeguroAvanzado usuario = new UsuarioSeguroAvanzado(username, password, maxIntentos);
+        UsuarioSeguroAvanzado usuario = new UsuarioSeguroAvanzado(username, password, maxIntentos);
 
         int opcion;
 
@@ -46,7 +45,7 @@ public class Main {
                     if (resultado) {
                         System.out.println("Autenticación exitosa");
                     } else {
-                        System.out.println(" Fallo de autenticación");
+                        System.out.println("Fallo de autenticación");
                     }
                     break;
 
@@ -65,9 +64,9 @@ public class Main {
                     boolean cambio = usuario.cambiarPassword(actual, nueva);
 
                     if (cambio) {
-                        System.out.println(" Contraseña cambiada correctamente");
+                        System.out.println("Contraseña cambiada correctamente");
                     } else {
-                        System.out.println(" No se pudo cambiar la contraseña");
+                        System.out.println("No se pudo cambiar la contraseña");
                     }
                     break;
 
@@ -85,7 +84,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println(" Opción inválida");
+                    System.out.println("Opción inválida");
             }
 
         } while (opcion != 0);
