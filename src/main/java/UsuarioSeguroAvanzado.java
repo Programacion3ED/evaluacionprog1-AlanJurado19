@@ -36,7 +36,7 @@ public class UsuarioSeguroAvanzado {
         return accesoExitoso;
     }
 
-    public boolean autenticar(String passwordIngresada) {
+    public boolean autenticar(String passwordIngresada) {     //boolean
         if (bloqueado) {
             return false;
         }
